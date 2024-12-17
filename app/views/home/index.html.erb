@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <!-- Section d'introduction -->
+  <div class="text-center">
+    <h1 class="display-4 text-primary">Bienvenue sur Eventbrite !</h1>
+    <p class="lead">Découvrez et organisez les événements les plus excitants autour de vous.</p>
+    <hr class="my-4">
+    <p>Que vous soyez un organisateur ou un participant, Eventbrite vous aide à trouver ce que vous cherchez !</p>
+
+    <!-- Boutons d'appel à l'action -->
+    <div class="mt-4">
+      <%= link_to "Découvrir les événements", "#", class: "btn btn-success btn-lg mx-2" %>
+      <% if user_signed_in? %>
+        <%= link_to "Créer un événement", "#", class: "btn btn-primary btn-lg mx-2" %>
+      <% else %>
+        <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-outline-primary btn-lg mx-2" %>
+        <%= link_to "Se connecter", new_user_session_path, class: "btn btn-outline-secondary btn-lg mx-2" %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Section des événements populaires -->
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Événement 1">
+        <div class="card-body">
+          <h5 class="card-title">Conférence Tech</h5>
+          <p class="card-text">Rejoignez-nous pour une journée dédiée aux technologies innovantes.</p>
+          <%= link_to "En savoir plus", "#", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Événement 2">
+        <div class="card-body">
+          <h5 class="card-title">Atelier Cuisine</h5>
+          <p class="card-text">Apprenez les secrets des grands chefs dans cet atelier interactif.</p>
+          <%= link_to "En savoir plus", "#", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Événement 3">
+        <div class="card-body">
+          <h5 class="card-title">Soirée Networking</h5>
+          <p class="card-text">Élargissez votre réseau lors de cette soirée conviviale.</p>
+          <%= link_to "En savoir plus", "#", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section témoignages -->
+  <div class="text-center mt-5">
+    <h2 class="text-primary">Ce que disent nos utilisateurs</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Eventbrite a rendu l'organisation de notre conférence tellement plus facile. Une plateforme intuitive et bien conçue!"</p>
+            <h5 class="card-title">Marie Dupont</h5>
+            <p class="text-muted">Organisatrice d'événements</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"J'ai trouvé des événements incroyables grâce à Eventbrite. C'est ma plateforme préférée!"</p>
+            <h5 class="card-title">Pierre Martin</h5>
+            <p class="text-muted">Participant</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Eventbrite simplifie tout, de la création à la gestion des événements. Un outil indispensable pour tous les organisateurs!"</p>
+            <h5 class="card-title">Lucie Petit</h5>
+            <p class="text-muted">Organisatrice d'événements</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

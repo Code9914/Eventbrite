@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/application"
+require "importmap/commands"
+pin "@rails/ujs", to: "https://cdn.jsdelivr.net/npm/@rails/ujs@7.0.0/dist/rails-ujs.min.js"

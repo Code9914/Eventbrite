@@ -1,0 +1,7 @@
+<h1>Bienvenue, <%= @user.email %>!</h1>
+
+<p>
+  <strong>Email:</strong> <%= @user.email %>
+</p>
+
+<%= link_to 'Modifier mon profil', edit_user_path, class: 'btn btn-primary' %>
